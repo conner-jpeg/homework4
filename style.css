@@ -1,0 +1,7 @@
+h1 {
+    box-sizing: content-box;
+    text-align: center;
+    font-size: larger; 
+    font-weight: 700;
+    color:green;
+}
