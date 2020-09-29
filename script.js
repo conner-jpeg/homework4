@@ -17,6 +17,7 @@ var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var endPage = document.getElementById('endPage')
 var lastAnswer = ""
+var score = document.getElementById('highScore');
 
 var quizLogic = [{
     questionLogic: "How are you?",
@@ -50,6 +51,7 @@ function timerStart() {
             clearInterval(timerInterval)
             gamePage.setAttribute("class", "hide") 
             endPage.setAttribute("class", "show")
+            //if (correctLogic = 100%){}
         }
     }, 1000)
 }
@@ -65,7 +67,8 @@ function iterate() {
     lastAnswer = this.textContent 
     if(currentQuestion !== 0) {
     if(lastAnswer === quizLogic[currentQuestion-1].correctLogic){
-        console.log("correct") //in here I can add to my score variable a set amout of points for people answering correctly
+          //trying shit 
+        //console.log("correct") //in here I can add to my score variable a set amout of points for people answering correctly
     } else if(lastAnswer !== quizLogic[currentQuestion-1].correctLogic){
         countDown -= 7 //In here I can deduct points and from the countdown time for incorrect answers
     }
