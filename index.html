@@ -7,7 +7,29 @@
     <title>Homework4</title>
 </head>
 <body>
+    <nav>
+        <p>Time: <span id="timer">00</span> </p>
+    </nav>
+<br>
+<br>
+<section class="container" id="startPage">
     <h1>Wanna play a game?</h1>
+    <h2>Javascript Challenge</h2>
+    <h6>Answer the following questions about Javascript fundamentals before the timer runs out. Warning every wrong answer decreases the timer by X amount!</h6>
+   <button id="startButton">Start Game!</button>
+  </section>
+
+  <section class = "hide" id="gamePage">
+      <h2 id="question">question</h2>
+      <button id="option1">option1</button>
+      <button id="option2">option2</button>
+      <button id="option3">option3</button>
+      <button id="option4">option4</button>
+      </section>
+
+      <div class="hide" id="endPage">
+          <h2>Congratulations on finishing my quiz!!!!</h2>
+        </div>
   <script src="script.js"></script>  
 </body>
 </html>
