@@ -17,7 +17,12 @@ var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var endPage = document.getElementById('endPage')
 var lastAnswer = ""
-var score = document.getElementById('highScore');
+var highScore1 = ["100%"]
+var highScore2 = ["75%"]
+var highScore3 = ["50%"]
+var highScore4 = ["25%"] 
+var highScore5 =["0%"]
+var correctLogic = ["Good", "Huh", "blue", "4"];
 
 var quizLogic = [{
     questionLogic: "How are you?",
@@ -40,6 +45,7 @@ var quizLogic = [{
     questionLogic: "loading",
     optionLogic: ["loading", "loading", "loading", "loading"],
     correctLogic: "4"
+    
 }
 ]
 
@@ -65,10 +71,16 @@ function begin() {
 
 function iterate() {
     lastAnswer = this.textContent 
+    
     if(currentQuestion !== 0) {
-    if(lastAnswer === quizLogic[currentQuestion-1].correctLogic){
-          //trying shit 
+    if(lastAnswer === quizLogic[currentQuestion-1].correctLogic)
+        { 
+            //trying shit 
+            
+        highScore++;
+        //if(highScore ===
         //console.log("correct") //in here I can add to my score variable a set amout of points for people answering correctly
+        
     } else if(lastAnswer !== quizLogic[currentQuestion-1].correctLogic){
         countDown -= 7 //In here I can deduct points and from the countdown time for incorrect answers
     }
@@ -79,7 +91,7 @@ function iterate() {
     option2.textContent = quizLogic[currentQuestion].optionLogic[1]
     option3.textContent = quizLogic[currentQuestion].optionLogic[2]
     option4.textContent = quizLogic[currentQuestion].optionLogic[3]
-    currentQuestion++;
+    
 }
 
 
@@ -88,6 +100,13 @@ option1.addEventListener("click", iterate)
 option2.addEventListener("click", iterate)
 option3.addEventListener("click", iterate)
 option4.addEventListener("click", iterate)
+
+endPage.setAttribute("countDown", "correctLogic", "highScore")
+endPage.textContent = "Your Score:" + highScore1;
+
+//if (correctLogic = 100% 
+
+
 
 
 
