@@ -23,14 +23,14 @@ var scoreCounter = 0;
 var highScore = ["0%", "25%", "50%", "75%", "100%"];
 
 var quizLogic = [{
-    questionLogic: "How are you?",
-    optionLogic: ["Good", "Bad", "What?", "Alright, I guess"],
-    correctLogic: "Good"
+    questionLogic: "How many meters is 6ft?",
+    optionLogic: ["5", "1.83", "7.77", "3"],
+    correctLogic: "1.83"
 
 }, {
-    questionLogic: "How hungry are you?",
-    optionLogic: ["Very", "Not At All", "I could eat a horse", "Huh"],
-    correctLogic: "Huh"
+    questionLogic: "Old McDonald had a dog a______ was his name-o",
+    optionLogic: ["Shlo-mo", "Waldo", "Bingo", "Huh"],
+    correctLogic: "Bingo"
 }, {
     questionLogic: "Is the sky...?",
     optionLogic: ["Blue", "Green", "Crimson", "Grey"],
