@@ -1,2 +1,2 @@
 # homework4
-A question an answet game utilizing fundamental JavaScript
+A question an answer game utilizing fundamental JavaScript
