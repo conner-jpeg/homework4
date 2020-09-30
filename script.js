@@ -16,13 +16,11 @@ var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var endPage = document.getElementById('endPage')
+var endMessage = document.getElementById('congrats')
 var lastAnswer = ""
-var highScore1 = ["100%"]
-var highScore2 = ["75%"]
-var highScore3 = ["50%"]
-var highScore4 = ["25%"] 
-var highScore5 =["0%"]
-var correctLogic = ["Good", "Huh", "blue", "4"];
+
+var scoreCounter = 0; 
+var highScore = ["0%", "25%", "50%", "75%", "100%"];
 
 var quizLogic = [{
     questionLogic: "How are you?",
@@ -45,7 +43,6 @@ var quizLogic = [{
     questionLogic: "loading",
     optionLogic: ["loading", "loading", "loading", "loading"],
     correctLogic: "4"
-    
 }
 ]
 
@@ -76,14 +73,13 @@ function iterate() {
     if(lastAnswer === quizLogic[currentQuestion-1].correctLogic)
         { 
             //trying shit 
-            
-        highScore++;
-        //if(highScore ===
+           
+        scoreCounter++;
         //console.log("correct") //in here I can add to my score variable a set amout of points for people answering correctly
-        
     } else if(lastAnswer !== quizLogic[currentQuestion-1].correctLogic){
         countDown -= 7 //In here I can deduct points and from the countdown time for incorrect answers
     }
+    endPage.textContent = "Your score: " + highScore[scoreCounter];
     }
     
     questions.textContent = quizLogic[currentQuestion].questionLogic 
@@ -91,7 +87,7 @@ function iterate() {
     option2.textContent = quizLogic[currentQuestion].optionLogic[1]
     option3.textContent = quizLogic[currentQuestion].optionLogic[2]
     option4.textContent = quizLogic[currentQuestion].optionLogic[3]
-    
+    currentQuestion++;
 }
 
 
@@ -101,10 +97,10 @@ option2.addEventListener("click", iterate)
 option3.addEventListener("click", iterate)
 option4.addEventListener("click", iterate)
 
-endPage.setAttribute("countDown", "correctLogic", "highScore")
-endPage.textContent = "Your Score:" + highScore1;
+endPage.setAttribute('congrats', " ")
+endPage.textContent = "Your Score:" + highScore[scoreCounter];
 
-//if (correctLogic = 100% 
+
 
 
 
