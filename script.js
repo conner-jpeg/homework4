@@ -79,7 +79,7 @@ function iterate() {
         countDown -= 7 //In here I can deduct points and from the countdown time for incorrect answers
     }
     endPage.textContent = "Your score: " + highScore[scoreCounter];
-    localStorage.setItem ("highscore", scoreCounter)
+    window.localStorage.setItem ("highscore", scoreCounter)
     }
 
     //storage
