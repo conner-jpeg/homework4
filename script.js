@@ -73,14 +73,19 @@ function iterate() {
     if(lastAnswer === quizLogic[currentQuestion-1].correctLogic)
         { 
             //trying shit 
-           
         scoreCounter++;
         //console.log("correct") //in here I can add to my score variable a set amout of points for people answering correctly
     } else if(lastAnswer !== quizLogic[currentQuestion-1].correctLogic){
         countDown -= 7 //In here I can deduct points and from the countdown time for incorrect answers
     }
     endPage.textContent = "Your score: " + highScore[scoreCounter];
+    localStorage.setItem ("highscore", scoreCounter)
     }
+
+    //storage
+
+
+
     
     questions.textContent = quizLogic[currentQuestion].questionLogic 
     option1.textContent = quizLogic[currentQuestion].optionLogic[0]
@@ -99,7 +104,8 @@ option4.addEventListener("click", iterate)
 
 endPage.setAttribute('congrats', " ")
 endPage.textContent = "Your Score:" + highScore[scoreCounter];
-
+localStorage.setItem ("highscore", scoreCounter)
+//localStorage.getItem ("scoreCounter")
 
 
 
